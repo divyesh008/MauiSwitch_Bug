@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Switch_Bug.MainPage">
+   
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <!--This not works in both Android & iOS-->
+            <Switch x:Name="toggle1" IsToggled="True" HorizontalOptions="Center">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor"
+                                        Value="Green" />
+                                <Setter Property="OnColor"
+                                        Value="Navy" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Off">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor"
+                                        Value="Red" />
+                                <Setter Property="OnColor"
+                                        Value="Gray" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Switch>
+
+            <Switch x:Name="toggle2"
+                    ThumbColor="#DFD8F7"
+                    HorizontalOptions="Center"
+                    Toggled="toggle2_Toggled" />
+
+        </VerticalStackLayout>
+
+</ContentPage>
+
