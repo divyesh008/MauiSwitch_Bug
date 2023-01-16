@@ -21,6 +21,11 @@ public partial class MainPage : ContentPage
             toggle2.ThumbColor = Color.FromArgb("#DFD8F7");
         }
     }
+
+    async void Button_Clicked(System.Object sender, System.EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(HomePage), false);
+    }
 }
 
 

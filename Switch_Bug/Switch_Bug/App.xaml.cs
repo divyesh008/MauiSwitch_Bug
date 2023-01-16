@@ -6,7 +6,10 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+        Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
+
+        MainPage = new AppShell();
 	}
 }
 

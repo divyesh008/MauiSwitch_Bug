@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Switch_Bug.MainPage">
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="Switch_Bug.MainPage"
+             Title="Main Page">
    
         <VerticalStackLayout
             Spacing="25"
@@ -37,6 +39,17 @@
                     HorizontalOptions="Center"
                     Toggled="toggle2_Toggled" />
 
+            <Switch x:Name="toggle3"
+                    ThumbColor="#DFD8F7"
+                    HorizontalOptions="Center" >
+                <Switch.Behaviors>
+                    <toolkit:EventToCommandBehavior
+                        EventName="Toggled"
+                        Command="{Binding ToggleCommand}"/>
+                </Switch.Behaviors>
+            </Switch>
+
+            <Button Text="Click Me" Clicked="Button_Clicked"/>
         </VerticalStackLayout>
 
 </ContentPage>
