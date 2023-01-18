@@ -2,9 +2,9 @@
 
 namespace Switch_Bug;
 
-public partial class HomePage : ContentPage
+public partial class BookPage : ContentPage
 {
-	public HomePage(HomePageViewModel viewModel)
+	public BookPage(BookPageViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

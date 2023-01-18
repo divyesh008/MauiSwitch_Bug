@@ -47,13 +47,22 @@
 
 	<ItemGroup>
 	  <None Remove="CommunityToolkit.Maui" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="CommunityToolkit.Mvvm" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui" Version="1.2.0" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="HomePage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	  <MauiXaml Update="BookPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 </Project>

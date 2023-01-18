@@ -49,7 +49,7 @@
                 </Switch.Behaviors>
             </Switch>
 
-            <Button Text="Click Me" Clicked="Button_Clicked"/>
+            <Button Text="Click Me" Command="{Binding ClickCommand}"/>
         </VerticalStackLayout>
 
 </ContentPage>

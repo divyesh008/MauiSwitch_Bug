@@ -1,10 +1,13 @@
-﻿namespace Switch_Bug;
+﻿using Switch_Bug.ViewModels;
+
+namespace Switch_Bug;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
+	public MainPage(MainPageViewModel viewModel)
 	{
 		InitializeComponent();
+        BindingContext = viewModel;
 	}
 
 	// This not works in iOS, works fine in Android
@@ -22,10 +25,10 @@ public partial class MainPage : ContentPage
         }
     }
 
-    async void Button_Clicked(System.Object sender, System.EventArgs e)
-    {
-        await Shell.Current.GoToAsync(nameof(HomePage), false);
-    }
+    //async void Button_Clicked(System.Object sender, System.EventArgs e)
+    //{
+    //    await Shell.Current.GoToAsync(nameof(HomePage), false);
+    //}
 }
 
 
